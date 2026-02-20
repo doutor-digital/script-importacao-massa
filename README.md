@@ -48,3 +48,17 @@ Instalação do pandas:
 
 ```bash
 pip install pandas
+```
+
+⚙️ Como Usar
+Passo 1 — Preparação dos Arquivos
+
+Coloque na pasta do projeto os relatórios exportados com os nomes exatos abaixo:
+
+cadastro.xls
+tratamentos.xls
+desmarcados.xls
+nao-compareceu.xls
+avaliacoes.xls
+
+⚠️ Os nomes precisam ser exatamente iguais para o script funcionar corretamente.
