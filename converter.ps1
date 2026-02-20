@@ -1,7 +1,7 @@
 # 1. LISTA DE ARQUIVOS (O motor vai processar todos estes nomes)
 # Se o nome do arquivo mudar no futuro, basta alterar aqui
-$arquivos = @("cadastro", "tratamentos", "desmarcados", "nao-compareceu", "avaliacoes")
-$pasta = "C:\Users\douto\Downloads\script-importacao-massa"
+$arquivos = @("cadastros", "tratamentos", "desmarcados", "nao-compareceu", "avaliacoes")
+$pasta = "C:\Users\douto\Downloads\script-importacao-massa\Arquivos"
 
 Write-Host "Iniciando o Motor Excel em Lote..."
 $excel = New-Object -ComObject Excel.Application

@@ -7,13 +7,17 @@ nome_unidade = input("Digite o nome da unidade/pasta para salvar os resultados (
 # Cria a pasta automaticamente se ela não existir
 os.makedirs(nome_unidade, exist_ok=True)
 print(f"\n[OK] Os arquivos serão salvos na pasta: {nome_unidade}\n")
-# === NOMES DOS ARQUIVOS DE ENTRADA === 
+# === NOMES DOS ARQUIVOS DE ENTRADA ===     
 # (Estes arquivos devem estar na mesma pasta onde o script está rodando)
-FILE_CADASTRO = 'cadastro.csv'      # Ajuste se o nome for diferente
-FILE_NAO_COMPARECEU = 'nao-compareceu.csv'
-FILE_DESMARCADOS = 'desmarcados.csv'
-FILE_AVALIACOES = 'avaliacoes.csv'         
-FILE_TRATAMENTOS = 'tratamentos.csv'       
+# === NOMES DOS ARQUIVOS DE ENTRADA === 
+# Apontando para a nova pasta "Arquivos" de forma segura
+PASTA_ORIGEM = 'Arquivos'
+
+FILE_CADASTRO = os.path.join(PASTA_ORIGEM, 'cadastros.csv') 
+FILE_NAO_COMPARECEU = os.path.join(PASTA_ORIGEM, 'nao-compareceu.csv')
+FILE_DESMARCADOS = os.path.join(PASTA_ORIGEM, 'desmarcados.csv')
+FILE_AVALIACOES = os.path.join(PASTA_ORIGEM, 'avaliacoes.csv')         
+FILE_TRATAMENTOS = os.path.join(PASTA_ORIGEM, 'tratamentos.csv')
 
 def limpar_dados(caminho):
     if not os.path.exists(caminho):
