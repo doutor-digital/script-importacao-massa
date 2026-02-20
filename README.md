@@ -1,4 +1,3 @@
-````markdown
 # 🚀 Script de Importação em Massa e Cruzamento de Dados
 
 Este projeto contém um conjunto de scripts para automatizar a conversão e o cruzamento de relatórios de clínicas/unidades de saúde.
@@ -49,7 +48,7 @@ Instalação do pandas:
 
 ```bash
 pip install pandas
-````
+```
 
 ---
 
@@ -59,13 +58,11 @@ pip install pandas
 
 Coloque na pasta do projeto os relatórios exportados com os nomes **exatos** abaixo:
 
-```
 cadastro.xls
 tratamentos.xls
 desmarcados.xls
 nao-compareceu.xls
 avaliacoes.xls
-```
 
 > ⚠️ Os nomes precisam ser exatamente iguais para o script funcionar corretamente.
 
@@ -87,13 +84,13 @@ Substitua pelo caminho real da sua máquina.
 
 Execute o script PowerShell:
 
-* Clique com o botão direito em `converter.ps1`
-* Selecione **Executar com PowerShell**
+- Clique com o botão direito em `converter.ps1`
+- Selecione **Executar com PowerShell**
 
 O script irá:
 
-* Converter automaticamente todos os arquivos `.xls` para `.csv`
-* Excluir os arquivos `.xls` originais
+- Converter automaticamente todos os arquivos `.xls` para `.csv`
+- Excluir os arquivos `.xls` originais
 
 ---
 
@@ -109,9 +106,9 @@ O sistema solicitará o nome da unidade/pasta (exemplo: `Balsas` ou `Acailandia`
 
 O script irá:
 
-* Criar a pasta automaticamente
-* Processar os dados
-* Gerar os arquivos finais
+- Criar a pasta automaticamente
+- Processar os dados
+- Gerar os arquivos finais
 
 ---
 
@@ -120,19 +117,16 @@ O script irá:
 O script produz três listas estratégicas:
 
 ## 1. `1_FINAL_NAO_COMPARECEU.csv`
-
 Pacientes que agendaram, mas não compareceram.
 
 ---
 
 ## 2. `2_FINAL_DESMARCADOS.csv`
-
 Pacientes que desmarcaram ativamente a consulta.
 
 ---
 
 ## 3. `3_FINAL_AVALIACOES_NAO_FECHADAS.csv`
-
 Pacientes que realizaram avaliação, mas **não iniciaram tratamento**.
 
 > Este é o arquivo de maior valor comercial.
@@ -143,8 +137,8 @@ Pacientes que realizaram avaliação, mas **não iniciaram tratamento**.
 
 Ao final da execução, será exibido um resumo com:
 
-* Total de pacientes recuperados
-* Quantidade de pacientes com telefone válido
+- Total de pacientes recuperados
+- Quantidade de pacientes com telefone válido
 
 ---
 
@@ -152,18 +146,18 @@ Ao final da execução, será exibido um resumo com:
 
 O script Python aplica automaticamente:
 
-* Padronização de textos em **maiúsculas**
-* Remoção de espaços extras
-* Tratamento de linhas inválidas (`on_bad_lines='skip'`)
-* Cruzamento pelo campo **PACIENTE**
+- Padronização de textos em **maiúsculas**
+- Remoção de espaços extras
+- Tratamento de linhas inválidas (`on_bad_lines='skip'`)
+- Cruzamento pelo campo **PACIENTE**
 
 ---
 
 # ⚠️ Observações Importantes
 
-* O script depende da consistência dos nomes das colunas
-* Pequenas variações nos relatórios podem impactar o cruzamento
-* Recomenda-se validar os arquivos `.csv` antes do processamento
+- O script depende da consistência dos nomes das colunas
+- Pequenas variações nos relatórios podem impactar o cruzamento
+- Recomenda-se validar os arquivos `.csv` antes do processamento
 
 ---
 
@@ -171,26 +165,13 @@ O script Python aplica automaticamente:
 
 Possíveis evoluções do projeto:
 
-* Interface gráfica para execução
-* Detecção automática de colunas
-* Integração com API de WhatsApp
-* Dashboard de métricas de recuperação
+- Interface gráfica para execução
+- Detecção automática de colunas
+- Integração com API de WhatsApp
+- Dashboard de métricas de recuperação
 
 ---
 
 # 👨‍💻 Autor
 
 Automação desenvolvida para recuperação e reativação de pacientes em clínicas de saúde.
-
-```
-
----
-
-Se você usar isso em um repositório GitHub agora, já está **nível produto comercial**.
-
-Se quiser, posso no próximo passo:
-
-- criar um **README com badge, logo e estrutura SaaS**
-- montar **pitch de venda**
-- ou revisar seu `script.py` para performance e escalabilidade
-```
